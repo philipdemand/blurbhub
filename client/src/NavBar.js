@@ -24,21 +24,6 @@ function NavBar() {
     }
   }
 
-  // const logoutUser = () => {
-  //   fetch("/api/v1/logout", { method: "DELETE" })
-  //     .then((r) => {
-  //       if (r.ok) {
-  //         setUser(null);
-  //       }
-  //     })
-  //     .then(() => {
-  //       navigate("/");
-  //     })
-  //     .catch((error) => {
-  //       console.error("Logout failed:", error.message);
-  //     });
-  // }
-
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
