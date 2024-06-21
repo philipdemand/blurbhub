@@ -29,7 +29,7 @@ function NavBar() {
       <Container>
         <Navbar.Brand href="#home">blurbHub</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        {/* <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Link</Nav.Link>
@@ -45,7 +45,7 @@ function NavBar() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-        </Navbar.Collapse>
+        </Navbar.Collapse> */}
         {user
           ? <Button onClick={logoutUser} variant="secondary" size="sm">Logout {user.username}</Button>
           : null
