@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { UserContext } from './contexts/UserContext';
 import LoginPage from './LoginPage';
@@ -10,6 +10,15 @@ import PostsContainer from './PostsContainer';
 const App = () => {
 
   const { user } = useContext(UserContext);
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setIsLoading(false)
+  }, [])
+
+  if (isLoading) {
+    return <h1>LOADING.....</h1>
+  }
 
   return (
     <div>
@@ -19,7 +28,6 @@ const App = () => {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
-          <Route path="/posts" element={<PostsContainer />} />
         </Routes>
       ) : (
         <Routes>
