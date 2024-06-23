@@ -8,5 +8,5 @@ class Post < ApplicationRecord
     has_many :comments
   
     validates :post_body, presence: true, length: { maximum: 255 }
-    validates :user_id, presence: true
+    # validates :user_id, presence: true
   end

@@ -11,11 +11,5 @@ class User < ApplicationRecord
   
     validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
     validates :username, presence: true, uniqueness: true
-    validates :password, presence: true, length: { minimum: 6 }, if: :password_required?
-  
-    private
-  
-    def password_required?
-      new_record? || password.present?
-    end
+    validates :password, presence: true, length: { minimum: 6 }
   end
