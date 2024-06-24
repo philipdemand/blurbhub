@@ -20,6 +20,8 @@ const Comment = ({ comment, onDeleteComment, onEditComment }) => {
         }
     }
 
+    console.log(comment)
+
     const toggleEdit = () => {
         setEditClicked(!editClicked)
     }

@@ -39,7 +39,7 @@ const SignupPage = () => {
                 password_confirmation: formData.password_confirmation
             })
             setUser(response.data);
-            navigate("/posts")
+            navigate("/postscontainer")
         } catch (error) {
             setErrorData(error.response.data.errors)
         }
