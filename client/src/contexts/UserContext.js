@@ -15,7 +15,7 @@ function UserProvider({ children }) {
           const data = await res.json();
           if (data) {
             setUser(data);
-            navigate("/postscontainer")
+            navigate("/posts")
           } else {
             navigate("/");
           }

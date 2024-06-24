@@ -31,7 +31,7 @@ const LoginPage = () => {
             setUser(response.data)
             setUsername("");
             setPassword("");
-            navigate("/postscontainer")
+            navigate("/posts")
 
         } catch (error) {
             setErrorData(error.response.data.errors || "An error occurred");

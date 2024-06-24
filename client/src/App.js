@@ -31,7 +31,7 @@ const App = () => {
         </Routes>
       ) : (
         <Routes>
-          <Route path="/postscontainer" element={<PostsContainer />} />
+          <Route path="/posts" element={<PostsContainer />} />
         </Routes>
       )}
     </div>
