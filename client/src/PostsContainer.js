@@ -6,12 +6,14 @@ import CreatePostForm from './CreatePostForm';
 const PostsContainer = () => {
 
     const [posts, setPosts] = useState([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get("/api/v1/posts")
                 setPosts(response.data)
+                setLoading(false)
             } catch (error) {
                 console.error(error)
             }
@@ -58,6 +60,10 @@ const PostsContainer = () => {
                 ? post.comments.filter(comment => comment.id !== commentId)
                 : post.comments
         })))
+    }
+
+    if (loading) {
+        return <h1>Loading...</h1>
     }
 
     return (
